@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Therapy Forest - Emotion Wheel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Didot', serif;
+      background: #fefae0;
+      text-align: center;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #5f7161;
+    }
+
+    .wheel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .emotion {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+      padding: 0.5rem;
+    }
+
+    .emotion:hover {
+      transform: scale(1.1);
+    }
+
+    .emoji {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .label {
+      font-size: 0.9rem;
+    }
+
+    .sad { background: #6688c3; }
+    .lonely { background: #b25da6; }
+    .overwhelmed { background: #ff7e47; }
+    .anxious { background: #eaaf41; color: #3b3b3b; }
+    .angry { background: #ce4a4a; }
+    .tired { background: #e3d4c2; color: #3b3b3b; }
+    .confused { background: #c7d86e; color: #3b3b3b; }
+    .hopeful { background: #f86285; }
+    .grateful { background: #e2a1fa; color: #3b3b3b; }
+    .calm { background: #376c3d; }
+  </style>
+</head>
+<body>
+  <h1>How are you feeling today?</h1>
+  <div class="wheel">
+    <div class="emotion angry" onclick="goTo('angry.html')">
+      <div class="emoji"><i class="fas fa-bolt"></i></div>
+      <div class="label">Angry</div>
+    </div>
+    <div class="emotion overwhelmed" onclick="goTo('overwhelmed.html')">
+      <div class="emoji"><i class="fas fa-cloud-showers-heavy"></i></div>
+      <div class="label">Overwhelmed</div>
+    </div>
+    <div class="emotion anxious" onclick="goTo('anxious.html')">
+      <div class="emoji"><i class="fas fa-heartbeat"></i></div>
+      <div class="label">Anxious</div>
+    </div>
+    <div class="emotion tired" onclick="goTo('tired.html')">
+      <div class="emoji"><i class="fas fa-bed"></i></div>
+      <div class="label">Tired</div>
+    </div>
+    <div class="emotion confused" onclick="goTo('confused.html')">
+      <div class="emoji"><i class="fas fa-question-circle"></i></div>
+      <div class="label">Confused</div>
+    </div>
+    <div class="emotion calm" onclick="goTo('calm.html')">
+      <div class="emoji"><i class="fas fa-leaf"></i></div>
+      <div class="label">Calm</div>
+    </div>
+    <div class="emotion grateful" onclick="goTo('grateful.html')">
+      <div class="emoji"><i class="fas fa-hands"></i></div>
+      <div class="label">Grateful</div>
+    </div>
+    <div class="emotion hopeful" onclick="goTo('hopeful.html')">
+      <div class="emoji"><i class="fas fa-star"></i></div>
+      <div class="label">Hopeful</div>
+    </div>
+    <div class="emotion lonely" onclick="goTo('lonely.html')">
+      <div class="emoji"><i class="fas fa-user"></i></div>
+      <div class="label">Lonely</div>
+    </div>
+    <div class="emotion sad" onclick="goTo('sad.html')">
+      <div class="emoji"><i class="fas fa-cloud"></i></div>
+      <div class="label">Sad</div>
+    </div>
+  </div>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>
